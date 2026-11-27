@@ -26,13 +26,13 @@
 <table border="1">
     <tr>
         <th>Trabajador</th>
-        <th>Lunes </th>
-        <th>Martes </th>
-        <th>Miércoles </th>
-        <th>Jueves </th>
-        <th>Viernes </th>
-        <th>Sábado </th>
-        <th>Domingo </th>
+        <th>Lunes ↑↓ </th>
+        <th>Martes ↑↓ </th>
+        <th>Miércoles ↑↓ </th>
+        <th>Jueves ↑↓</th>
+        <th>Viernes ↑↓ </th>
+        <th>Sábado ↑↓</th>
+        <th>Domingo ↑↓ </th>
     </tr>
 
     <tr>
@@ -138,35 +138,39 @@
 <p>Formulario para registrar los datos de un nuevo trabajador.</p>
 
 <form>
-    <label>Nombre completo:</label>
-    <input type="text" name="nombre">
-    <br><br>
+    <fieldset>
+        <legend>Datos del trabajador</legend>
 
-    <label>DNI:</label>
-    <input type="text" name="dni">
-    <br><br>
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre">
+        <br><br>
 
-    <label>Teléfono de contacto:</label>
-    <input type="text" name="telefono">
-    <br><br>
+        <label>DNI:</label>
+        <input type="text" name="dni">
+        <br><br>
 
-    <label>Fecha de nacimiento:</label>
-    <input type="date" name="fecha">
-    <br><br>
+        <label>Teléfono de contacto:</label>
+        <input type="text" name="telefono">
+        <br><br>
 
-    <label>Departamento asignado:</label>
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="fecha">
+        <br><br>
 
-    <select name="departamento">
-        <option>Selecciona un departamento</option>
-        <option>Grupo Técnico</option>
-        <option>Grupo Logística</option>
-        <option>Departamento Administración</option>
-    </select>
+        <label>Departamento asignado:</label>
+        <select name="departamento">
+            <option>Selecciona un departamento</option>
+            <option>Grupo Técnico</option>
+            <option>Grupo Logística</option>
+            <option>Departamento Administración</option>
+        </select>
 
-    <br><br>
+        <br><br>
 
-    <input type="submit" value="Registrar trabajador">
-    <input type="reset" value="Borrar datos">
+        <input type="submit" value="Registrar trabajador">
+        <input type="reset" value="Borrar datos">
+
+    </fieldset>
 </form>
         </section>
     </main>

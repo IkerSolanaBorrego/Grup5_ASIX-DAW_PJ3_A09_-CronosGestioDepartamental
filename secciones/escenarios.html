@@ -25,11 +25,11 @@
             <table border="1">
                 <thead>
                     <tr>
-                        <th>Hora</th>
-                        <th>Escenario principal</th>
-                        <th>Artista</th>
-                        <th>Tecnico encargado</th>
-                        <th>Escenario alternativo</th>
+                        <th>Hora↑↓</th>
+                        <th>Escenario principal↑↓</th>
+                        <th>Artista↑↓</th>
+                        <th>Tecnico encargado↑↓</th>
+                        <th>Escenario alternativo↑↓</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -98,36 +98,67 @@
         <section>
             <h2>Reportar incidencia técnica</h2>
             <form action="" method="POST">
-                <label for="hora">Hora</label>
-                <input type="" name="hora">
-
-                <label for="escenario_afectado">Escenario afectado</label>
-                <input type="" name="escenario_afectado">
-
-                <label for="artista">Artista</label>
-                <input type="" name="artista">
-
-                <label for="escenario_alternativo">Escenario alternativo</label>
-                <input type="" name="escenario_alternativo">
-
-                <label for="elemento">Elemento afectado</label>
-                <input type="" name="elemento">
-
-                <label for="tecnico">Técnico encargado</label>
-                <input type="text" name="tecnico" placeholder="Asigna la incidencia a un técnico.">
-
-                <label for="prioridad">Prioridad</label>
-                <input type="" name="prioridad">
-
-                <label for="descripcion">Descripción</label>
-                <textarea type="" name="descripcion"></textarea>
-
+                <fieldset>
+                    <legend>Información del evento</legend>
+                    <label>Hora</label>
+                    <input type="text" name="hora">
+                    <br>
+                    <br>
+                    <label>Escenario afectado</label>
+                    <select name="escenario_afectado">
+                        <option value="titus">Titus Carpa</option>
+                        <option value="grandjam">Grand Jam</option>
+                        <option value="razzmataz">Razzmataz</option>
+                        <option value="lumin">Lumin Carpa</option>
+                        <option value="leblanc">Leblanc</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Artista</label>
+                    <input type="text" name="artista">
+                    <br>
+                    <br>
+                    <label>Escenario alternativo</label>
+                    <select name="escenario_alternativo">
+                        <option value="titus">Titus Carpa</option>
+                        <option value="grandjam">Grand Jam</option>
+                        <option value="razzmataz">Razzmataz</option>
+                        <option value="lumin">Lumin Carpa</option>
+                        <option value="leblanc">Leblanc</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Información del problema</legend>
+                    <label>Elemento afectado</label>
+                    <select name="elemento">
+                        <option value="sonido">Sonido</option>
+                        <option value="iluminacion">Iluminación</option>
+                        <option value="estructura">Estructura</option>
+                        <option value="cableado">Cableado</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Técnico encargado</label>
+                    <input type="text" name="tecnico" placeholder="Asigna la incidencia a un técnico.">
+                    <br>
+                    <br>
+                    <label>Prioridad</label>
+                    <select name="prioridad">
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Descripción</label>
+                    <textarea name="descripcion"></textarea>
+                    <br>
+                </fieldset>
+                <br>
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

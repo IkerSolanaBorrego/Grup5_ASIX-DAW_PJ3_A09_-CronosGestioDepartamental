@@ -3,25 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Escenarios</title>
 </head>
 <body>
     <header>
-
+        <h1>Seguridad- Marc Prieto</h1>
     </header>
     <nav>
-
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="escenarios.html">Coordinación de escenarios</a></li>
+            <li><a href="personal.html">Departamento RRHH</a></li>
+            <li><a href="seguridad.html">Departamento de Seguridad</a></li>
+            <li><a href="inventario.html">Departamento de Logística</a></li>
+            <li><a href="entradas.html">Atención al cliente / Ticketing</a></li>
+        </ul>
     </nav>
     <main>
         <section>
-            
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+             <tr>
+    <th>Zona Restringida</th>
+    <th>Punto de Acceso</th>
+    <th>Hora de Lectura</th>
+    <th>Nombre del Visitante</th>
+    <th>Tipo de Acreditación</th>
+    <th>Resultado Validación</th>
+  </tr>
+
+  <!-- ZONA VIP (4) -->
+  <tr>
+    <td rowspan="4">Zona VIP</td>
+    <td>Puerta Norte</td>
+    <td>21:30</td>
+    <td>Marta Puig</td>
+    <td>VIP</td>
+    <td><img src="htmlpracticaseguridad/img/circle-check-solid-full.svg" width="16" height="16" alt="Autorizado"> Acceso Autorizado</td>
+  </tr>
+  <tr>
+    <td>Puerta Norte</td>
+    <td>21:34</td>
+    <td>Juan Ferrer</td>
+    <td>Prensa</td>
+    <td><img src="htmlpracticaseguridad/img/circle-xmark.svg" width="16" height="16" alt="Denegado"> Acceso Denegado</td>
+  </tr>
+  <tr>
+    <td>Ascensor 3</td>
+    <td>21:41</td>
+    <td>Laia Serra</td>
+    <td>VIP</td>
+    <td><img src="htmlpracticaseguridad/img/circle-check-solid-full.svg" width="16" height="16" alt="Autorizado"> Acceso Autorizado</td>
+  </tr>
+  <tr>
+    <td>Ascensor 3</td>
+    <td>21:47</td>
+    <td>Pedro Vidal</td>
+    <td>VIP</td>
+    <td><img src="htmlpracticaseguridad/img/clock.svg" width="16" height="16" alt="Caducado"> Caducado</td>
+  </tr>
+
+  <!-- BACKSTAGE (3) -->
+  <tr>
+    <td rowspan="3">Backstage</td>
+    <td>Escaleras A</td>
+    <td>20:55</td>
+    <td>Nuria Costa</td>
+    <td>Staff</td>
+    <td><img src="htmlpracticaseguridad/img/circle-check-solid-full.svg" width="16" height="16" alt="Autorizado"> Acceso Autorizado</td>
+  </tr>
+  <tr>
+    <td>Escaleras A</td>
+    <td>21:02</td>
+    <td>Oriol Roca</td>
+    <td>Prensa</td>
+    <td><img src="htmlpracticaseguridad/img/circle-xmark.svg" width="16" height="16" alt="Denegado"> Acceso Denegado</td>
+  </tr>
+  <tr>
+    <td>Puerta Lateral</td>
+    <td>21:18</td>
+    <td>Marc Soler</td>
+    <td>Staff</td>
+    <td><img src="htmlpracticaseguridad/img/clock.svg" width="16" height="16" alt="Caducado"> Caducado</td>
+  </tr>
+
+  <!-- CAMERINOS (3) -->
+  <tr>
+    <td rowspan="3">Camerinos</td>
+    <td>Puerta Este↑↓</td>
+    <td>19:45</td>
+    <td>Aina Pons</td>
+    <td>Artista</td>
+    <td><img src="htmlpracticaseguridad/img/circle-check-solid-full.svg" width="16" height="16" alt="Autorizado"> Acceso Autorizado</td>
+  </tr>
+  <tr>
+    <td>Puerta Este↑↓</td>
+    <td>19:52</td>
+    <td>Biel Camps</td>
+    <td>VIP</td>
+    <td><img src="htmlpracticaseguridad/img/circle-xmark.svg" width="16" height="16" alt="Denegado"> Acceso Denegado</td>
+  </tr>
+  <tr>
+    <td>Paso de Servicio↑↓</td>
+    <td>20:03</td>
+    <td>Eva Ribas</td>
+    <td>Staff</td>
+    <td><img src="htmlpracticaseguridad/img/circle-check-solid-full.svg" width="16" height="16" alt="Autorizado"> Acceso Autorizado</td>
+  </tr>
+</table>
+<h2>Solicitud de Pase VIP</h2>
+
+<form action="#" method="post">
+
+  <!-- Código de autorización -->
+  <p>
+   <!--el label for=  busca  el campo codigo-->
+    <label for="codigo">Código de autorización:</label><br>
+    <!--el input id es el campo que busca-->
+  <!--el required minlegth es que minimo de caracteres 8 y el max que maximo de caracteres 8 tambien-->
+    <input type="password" id="codigo" name="codigo"
+           required minlength="8" maxlength="8"
+           pattern="[0-9]{8}" inputmode="numeric"
+           title="Debe contener exactamente 8 dígitos numéricos">
+  </p>
+
+  <!-- Email del invitado -->
+  <p>
+    <label for="email">Email del invitado:</label><br>
+    <input type="email" id="email" name="email" required
+           title="Introduce un email válido, por ejemplo nombre@dominio.com">
+  </p>
+
+  <!-- Aquí empieza el cuadro donde van las zonas -->
+<fieldset>
+
+  <!-- Título del cuadro -->
+  <legend>Zonas permitidas:</legend>
+
+  <!-- Casilla 1: Camerinos -->
+  <!-- type="checkbox" es una casilla para marcar, se pueden marcar varias -->
+  <!-- id es el nombre de esta casilla, para unirla con su texto -->
+  <!-- name es el mismo en todas, así van juntas en el grupo "zonas" -->
+  <!-- value es lo que se guarda si la marcas -->
+  <input type="checkbox" id="camerinos" name="zonas" value="camerinos">
+  <!-- El texto que se ve al lado de la casilla (for tiene que ser igual que el id) -->
+  <label for="camerinos">Camerinos</label>
+  <!-- br sirve para bajar a la línea de abajo -->
+  <br>
+
+  <!-- Casilla 2: Escenario (igual que la de arriba, solo cambian los nombres) -->
+  <input type="checkbox" id="escenario" name="zonas" value="escenario">
+  <label for="escenario">Escenario</label>
+  <br>
+
+  <!-- Casilla 3: Zona VIP -->
+  <input type="checkbox" id="zonavip" name="zonas" value="zona-vip">
+  <label for="zonavip">Zona VIP</label>
+  <br>
+
+  <!-- Casilla 4: Prensa (la última, no hace falta br) -->
+  <input type="checkbox" id="prensa" name="zonas" value="prensa">
+  <label for="prensa">Prensa</label>
+
+<!-- Aquí se cierra el cuadro, no te olvides de esto -->
+</fieldset>
+
+  <!-- Color oara la pulsera -->
+  <p>
+    <label for="pulsera">Color de la pulsera:</label><br>
+    <select id="pulsera" name="pulsera" required>
+      <option value="">-- Elige un color --</option>
+      <option value="rojo">Rojo</option>
+      <option value="azul">Azul</option>
+      <option value="verde">Verde</option>
+      <option value="amarillo">Amarillo</option>
+      <option value="negro">Negro</option>
+    </select>
+  </p>
+
+  <p>
+    <button type="submit">Enviar solicitud</button> <!-- boton de submit es para enviar la solicitud-->
+  </p>
+
+</form>
+
+</body>
+</html>
+                </tr>
+                <tr>
+                    <td>Seguridad</td>
+                    <td>Marc Prieto</td>
+                </td>
+                </tr>
+
+
+
+
+
+            </table>
+
         </section>
+        <hr>
+        <section>
 
+        </section>
     </main>
-    <footer>
-<h1>Seguridad</h1>
-
-
-    </footer>
+    
 </body>
 </html>
